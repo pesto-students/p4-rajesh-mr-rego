@@ -6,6 +6,10 @@
     <meta charset="UTF-8" />
 
     <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
         .flex-container {
             display: flex;
             background-color: aqua;
@@ -49,12 +53,33 @@
             margin-right:0;
         }
 
+        .songlist {
+            width:auto;
+            margin-left: 50px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        tr, td {
+            text-indent: 5%;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        tr {
+            height: 50px;
+        }
+
         /* div {
             border: 1px solid black;
         } */
     </style>
 
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -73,7 +98,7 @@
         <div class="titlebar">
             <div style="flex: 20%; align-content: stretch;"><img class="titleimg" src="images/cattyboard.jpg"></img></div>
             <div style="flex: 100%; align-content: flex-start; margin-left: 10px; margin-top: 10px;">
-                <p>CattyBoard Top 100 Single Charts (11.06.36)</p>
+                <p style="font-size:20px;">CattyBoard Top 100 Single Charts (11.06.36)</p>
                 <p>Unknown Artist<br>2016.Charts.100 songs</p>
                 <div style="margin-top: 150px;">
                     <span><button><i class="las la-play"></i>Play All</button></span>
@@ -81,6 +106,35 @@
                     <span><button><i class="las la-ellipsis-h"></i>More</button></span>
                 </div>
             </div>
+        </div>
+
+        <div class="songlist">
+            <table>
+                <tr>
+                    <td>1. One Dance</td>
+                    <td>Crake feat CatKid & Cyla</td>
+                    <td>2.54</td>
+                    <td>Catty Cloud Sync</td>
+                </tr>
+                <tr>
+                    <td>2. Panda</td>
+                    <td>Cattee</td>
+                    <td>4.06</td>
+                    <td>Catty Cloud Sync</td>
+                </tr>
+                <tr>
+                    <td>3. Can't Stop The Feeling</td>
+                    <td>Catin Cimberlake</td>
+                    <td>3.56</td>
+                    <td>Catty Cloud Sync</td>
+                </tr>
+                <tr>
+                    <td>4. Work From Home</td>
+                    <td>Cat Harmony feat Cola</td>
+                    <td>3.34</td>
+                    <td>Catty Cloud Sync</td>
+                </tr>
+            </table>
         </div>
     <!-- </div> -->
 
