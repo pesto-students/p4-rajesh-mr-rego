@@ -4,8 +4,130 @@
 <head>
     <title>CattyBoard - Mihir Rego</title>
     <meta charset="UTF-8" />
+
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: aqua;
+        }
+
+        .sidenav {
+            width: 50px;
+            height: 100vh;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            /* background-color: pink; */
+            overflow-x: hidden;
+        }
+
+        .sidenav i {
+            display: flex;
+            height: 100px;
+        }
+
+        .titlebar {
+            display: flex;
+            top: 0;
+            left: 0;
+            height: 300px;
+            background-color: grey;
+            margin-left: 50px;
+            padding-left: 20px;
+            /* vertical-align: middle; */
+        }
+
+        .titleimg {
+            /* vertical-align: middle; */
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        .titleimg + .p {
+            margin-left:auto;
+            margin-right:0;
+        }
+
+        /* div {
+            border: 1px solid black;
+        } */
+    </style>
+
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 
 <body>
+    <!-- <div class="flex-container"> -->
+        <div class="sidenav">
+            <i class="las la-bars la-3x"></i>
+            <i class="las la-home la-3x"></i>
+            <i class="las la-search la-3x"></i>
+            <i class="las la-volume-up la-3x"></i>
+            <i class="las la-user la-3x"></i>
+            <i class="las la-cog la-3x"></i>
+            <i class="lab la-spotify la-3x"></i>
+            <i class="lab la-soundcloud la-3x"></i>
+        </div>
+    
+        <div class="titlebar">
+            <div style="flex: 20%; align-content: stretch;"><img class="titleimg" src="images/cattyboard.jpg"></img></div>
+            <div style="flex: 100%; align-content: flex-start; margin-left: 10px; margin-top: 10px;">
+                <p>CattyBoard Top 100 Single Charts (11.06.36)</p>
+                <p>Unknown Artist<br>2016.Charts.100 songs</p>
+                <div style="margin-top: 150px;">
+                    <span><button><i class="las la-play"></i>Play All</button></span>
+                    <span><button><i class="las la-plus"></i>Add To</button></span>
+                    <span><button><i class="las la-ellipsis-h"></i>More</button></span>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+
+
+    <!-- <table>
+        <tr>
+            <td class="menutr"><i class="las la-bars la-2x"></i></td>
+            <td rowspan="4" width="60px"><img src="images/cattyboard.jpg"></img></td>
+            <td rowspan="4">
+                <p><strong>Top 100 Single Charts (11.06.36)</strong></p>
+                <p>Unknown Artist</p>
+                <p>2016.Charts.100 songs</p>
+            </td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-home la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-search la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-volume-up la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-user la-2x"></i></td>
+            <td rowspan="4">
+                <p>Song 1</p>
+                <p>Song 2</p>
+                <p>Song 3</p>
+                <p>Song 4</p>
+            </td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-cog la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="lab la-spotify la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="lab la-soundcloud la-2x"></i></td>
+        </tr>
+        <tr>
+            <td colspan="100%">Hello There Last Column</td>
+        </tr>
+    </table>    -->
+
+    
+    
 </body>
 </html>
