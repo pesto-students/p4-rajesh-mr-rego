@@ -9,14 +9,64 @@
 
     <body>
         <div id="flex=container">
-            <h1 class="title">My Favourite Thing!</h1>
+            <h1 class="title">My Favourite Game!</h1>
             <div id="title" class="center">
                 <p>Celebrating over 30 Years of FUN - join millions of gamers worldwide in one of the most played video game of ALL TIME! Discover favorite Solitaire card games in one app;<br>
                     <strong>Klondike Solitaire, Spider Solitaire, FreeCell Solitaire, TriPeaks Solitaire and Pyramid Solitaire!</strong><br>
                     Simple rules and straightforward gameplay make Microsoft Solitaire Collection fun for players age 8 to 108.</p>
                 <img src="images/title.jpg" alt="Microsoft Solitare Collection" class="center">
             </div>
-        </div>
 
+            <div id="gameslist">
+                <div>Klondike Solitaire</div>
+                <div>Spider Solitaire</div>
+                <div>FreeCell Solitaire</div>
+                <div>TriPeaks Solitaire</div>
+                <div>Pyramid Solitaire</div>
+            </div>
+
+            <div id="form">
+                <form action="https://www.google.com">
+                    <p>Please Sign Up</p>
+                    <div class="block">
+                        <label class="mainlabel block">Title:</label> 
+                        <input type="radio" id="mr" name="salutation" value="Mr." required>
+                        <label for="mr">Mr.</label>
+                        <input type="radio" id="ms" name="salutation" value="Ms." required>
+                        <label for="ms">Ms.</label>
+                    </div>
+                    <div class="block">
+                        <label class="mainlabel block" for="fullname">Full name:</label> <input type="text" id="fullname" required>
+                    </div>
+                    <div class="block">
+                        <label class="mainlabel" for="phoneno">Phone No:</label> <input type="number" id="phoneno" required>
+                    </div>
+                    <div class="block">
+                        <label class="mainlabel" for="email">Email:</label> <input type="email" id="email" required>
+                    </div>
+                    <div class="block">
+                        <label class="mainlabel" for="password">Password:</label> <input type="password" id="password" required>
+                    </div>
+                    <div class="block">
+                        <label class="mainlabel" for="passwordcheck">Confirm Password:</label> <input type="password" id="passwordcheck" required>
+                    </div>
+                    
+                    <div class="block">
+                        <label class="mainlabel" for="country">Country:</label>
+                        <select name="country" id="country">
+                            <option value="canada">Canada</option>
+                            <option value="india">India</option>
+                            <option value="englang">England</option>
+                            <option value="australia">Australia</option>
+                        </select>
+                    </div>
+                    
+                    <div class="block">
+                        <label for="tac"></label><input type="checkbox" id="tac" required>I have read the Terms & Conditions.
+                    </div>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     </body>
 </html>
