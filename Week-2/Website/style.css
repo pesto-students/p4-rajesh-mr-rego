@@ -1,5 +1,14 @@
+html {
+    margin:    0 auto;
+    max-width: 640px;
+}
+
 body {
     background-color: lightblue;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 #flex-container {
