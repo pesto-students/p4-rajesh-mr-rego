@@ -1,0 +1,81 @@
+html {
+    margin:    0 auto;
+    max-width: 900px;
+}
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* min-height: 100vh; */
+}
+
+h3 {
+    /* flex-grow: 1; */
+    width: 400px;
+    height: 50px;
+    /* margin-left: 150px; */
+    background-color:darkgrey;
+}
+
+.fullsquare {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    text-align: center;
+}
+
+.fullsquare:hover::after {
+    content: "Hi!";
+    font-size: 2rem;
+    position: absolute;
+    margin-left: 200px;
+    margin-top: 100px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 400px; 
+}
+
+.square {
+    flex-grow: 1;
+    width: 200px;
+    height: 200px;
+    transition: transform 1s linear;
+}
+
+.sqr {
+    background-color: red;
+    transform-origin: top left;
+}
+
+.fullsquare:hover .sqr {
+    transform: rotate(90deg);
+}
+
+.sqy {
+    background-color: yellow;
+    transform-origin: top right;
+}
+
+.fullsquare:hover .sqy {
+    transform: rotate(-90deg);
+}
+
+.sqb {
+    background-color: blue;
+    transform-origin: bottom left;
+}
+
+.fullsquare:hover .sqb {
+    transform: rotate(-90deg);
+}
+
+.sqg {
+    background-color: darkgreen;
+    transform-origin: bottom right;
+}
+
+.fullsquare:hover .sqg {
+    transform: rotate(90deg);
+}
