@@ -1,7 +1,14 @@
+/*
+memoize function will first sort the array descending order, and then calculate or retrieve sum.
+this helps in reducing calculations for shuffled but same parameters, for eg. (100, 200, 300) or (200, 100, 300) or (300, 200, 100) 
+*/
 function memoize(fn) {
     const cache = new Map();
     return function(...args) {
+        console.log('---------------------------------------------');
+        console.log('original array =', args.toString());
         var sum = 0;
+        args.sort((a, b) => a - b);
         const key = args.toString();
         console.log('key =', key);
         if(cache.has(key)) {
@@ -34,8 +41,11 @@ function time(fn) {
 const memAdd = memoize(add);
 
 memAdd(100, 200, 300, 400);
-memAdd(100, 200, 300, 400);
+memAdd(200, 300, 100, 400, 100);
 memAdd(100, 200, 300, 400);
 memAdd(100, 200, 300, 400);
 memAdd(300, 200, 300, 400);
 memAdd(300, 200, 300, 400);
+memAdd(1, 2, 3, 4);
+memAdd(4, 3, 2, 1);
+
