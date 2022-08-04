@@ -20,35 +20,24 @@ const installList = [
     { softname: 'Windows X', version: 'v22H2'},
 ];
 
-// please change the following variable check to run the code respectively for 'bind()', 'call()' or 'apply()'
-const check = 'apply()';
+// run the code respectively for 'bind()', 'call()' or 'apply()'
+const check = ['bind()', 'call()', 'apply()'];
 
-if(check == 'bind()') {
-    console.log('"BIND" Example');
+for(let val in check) {
+    func = check[val];
+    console.log(func, 'example', '----------------------------');
+
     for(let sw in installList) {
-        console.log("---Installing...");
-        var installer = software.getInstall.bind(installList[sw]);
-        installer('Installed with', check);
-        console.log('--------------------------------------------');
+        if(func == 'bind()') {
+            var installer = software.getInstall.bind(installList[sw]);
+            installer('Installed with', func);
+        } else if(func == 'call()') {
+            software.getInstall.call(installList[sw], 'Installed with', func);
+        } else if(func == 'apply()') {
+            software.getInstall.apply(installList[sw], ['Installed with', func]);
+        } else {
+            console.log('Error with the value of check: ', func);
+        }
     }
-} else if(check == 'call()') {
-    console.log('"CALL" Example');
-    for(let sw in installList) {
-        console.log("---Installing...");
-        software.getInstall.call(installList[sw], 'Installed with', check);
-        console.log('--------------------------------------------');
-    }
-} else if(check == 'apply()') {
-    console.log('"APPLY" Example');
-    for(let sw in installList) {
-        console.log("---Installing...");
-        software.getInstall.apply(installList[sw], ['Installed with', check]);
-        console.log('--------------------------------------------');
-    }
-} else {
-    console.log('Error with the value of check: ', check);
+    console.log(' ');
 }
-
-
-
-
