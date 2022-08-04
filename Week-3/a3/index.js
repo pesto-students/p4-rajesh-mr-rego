@@ -11,9 +11,16 @@ function createIncrement() {
     return[increment,log];
 }
 
-const [increment,log] = createIncrement();
+var [increment,log] = createIncrement();
 increment();
 increment();
 increment();
 
-log();// What is logged?
+log();
+
+// What is logged?
+/*
+Mihir
+0 will always be logged, as the var message was created ony once when count was zero.
+'message' has not been updated at any point.
+*/
