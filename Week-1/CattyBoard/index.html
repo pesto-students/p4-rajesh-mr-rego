@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CattyBoard - Mihir Rego</title>
+    <meta charset="UTF-8" />
+
+    <style>
+        :root {
+            --custom-margin-left: 50px;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .flex-container {
+            display: flex;
+            background-color: aqua;
+        }
+
+        .sidenav {
+            width: 50px;
+            height: 90vh;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            /* background-color: pink; */
+            overflow-x: hidden;
+        }
+
+        .sidenav i {
+            display: flex;
+            height: 100px;
+        }
+
+        .titlebar {
+            display: flex;
+            top: 0;
+            left: 0;
+            height: 300px;
+            background-color: grey;
+            margin-left: var(--custom-margin-left);
+            padding-left: 20px;
+            /* vertical-align: middle; */
+        }
+
+        .titleimg {
+            /* vertical-align: middle; */
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        .titleimg + .p {
+            margin-left:auto;
+            margin-right:0;
+        }
+
+        .songlist {
+            width:auto;
+            margin-left: var(--custom-margin-left);
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+            margin-top: 20px;
+        }
+
+        tr, td {
+            text-indent: 5%;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        tr {
+            height: 50px;
+        }
+
+        /* div {
+            border: 1px solid black;
+        } */
+
+        /* footer {
+            margin-top: 50px;
+            margin-left: var(--custom-margin-left);
+            background-color: blue;
+            height: fit-content;
+        } */
+
+        .footerbar {
+            display: flex;
+            top: 0;
+            left: 0;
+            height: 100px;
+            background-color: lightblue;
+            margin-top: 100px;
+            margin-left: var(--custom-margin-left);
+            justify-content: space-between;
+            /* padding-left: 5px; */
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!-- <div class="flex-container"> -->
+        <div class="sidenav">
+            <i class="las la-bars la-3x"></i>
+            <i class="las la-home la-3x"></i>
+            <i class="las la-search la-3x"></i>
+            <i class="las la-volume-up la-3x"></i>
+            <i class="las la-user la-3x"></i>
+            <i class="las la-cog la-3x"></i>
+            <i class="lab la-spotify la-3x"></i>
+            <i class="lab la-soundcloud la-3x"></i>
+        </div>
+    
+        <div class="titlebar">
+            <div style="flex: 20%; align-content: stretch;"><img class="titleimg" src="images/cattyboard.jpg"></img></div>
+            <div style="flex: 100%; align-content: flex-start; margin-left: 10px; margin-top: 10px;">
+                <p style="font-size:20px;">CattyBoard Top 100 Single Charts (11.06.36)</p>
+                <p>Unknown Artist<br>2016.Charts.100 songs</p>
+                <div style="margin-top: 150px;">
+                    <span><button><i class="las la-play"></i>Play All</button></span>
+                    <span><button><i class="las la-plus"></i>Add To</button></span>
+                    <span><button><i class="las la-ellipsis-h"></i>More</button></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="songlist">
+            <table>
+                <tr>
+                    <td>1. One Dance</td>
+                    <td>Crake feat CatKid & Cyla</td>
+                    <td>2.54</td>
+                    <td>Catty Cloud Sync</td>
+                </tr>
+                <tr>
+                    <td>2. Panda</td>
+                    <td>Cattee</td>
+                    <td>4.06</td>
+                    <td>Catty Cloud Sync</td>
+                </tr>
+                <tr>
+                    <td>3. Can't Stop The Feeling</td>
+                    <td>Catin Cimberlake</td>
+                    <td>3.56</td>
+                    <td>Catty Cloud Sync</td>
+                </tr>
+                <tr>
+                    <td>4. Work From Home</td>
+                    <td>Cat Harmony feat Cola</td>
+                    <td>3.34</td>
+                    <td>Catty Cloud Sync</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer class="footerbar">
+            <div style="flex: 8%;"><img class="titleimg" src="images/cattyboard.jpg" width="75" height="75"></img></div>
+            <div style="flex: 20%; margin-left: 0px; margin-top: 5px;">
+                <p style="font-size:10px;">If It Ain't Love</p>
+                <p style="font-size:10px;">Catson Derulo</p>
+            </div>
+            <div style="flex: 80%; border: 1px solid black; justify-content: space-between;">
+                <div><i class="las la-step-backward la-3x"></i></div>
+                <div><i class="las la-pause la-3x"></i></div>
+                <div><i class="las la-step-forward la-3x"></i></div>
+                <div><i class="las la-redo-alt la-3x"></i></div>
+                <div><i class="las la-random la-3x"></i></div>
+            </div>
+        </footer>
+    <!-- </div> -->
+
+
+      
+    <!-- <table>
+        <tr>
+            <td class="menutr"><i class="las la-bars la-2x"></i></td>
+            <td rowspan="4" width="60px"><img src="images/cattyboard.jpg"></img></td>
+            <td rowspan="4">
+                <p><strong>Top 100 Single Charts (11.06.36)</strong></p>
+                <p>Unknown Artist</p>
+                <p>2016.Charts.100 songs</p>
+            </td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-home la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-search la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-volume-up la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-user la-2x"></i></td>
+            <td rowspan="4">
+                <p>Song 1</p>
+                <p>Song 2</p>
+                <p>Song 3</p>
+                <p>Song 4</p>
+            </td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="las la-cog la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="lab la-spotify la-2x"></i></td>
+        </tr>
+        <tr class="menutr">
+            <td><i class="lab la-soundcloud la-2x"></i></td>
+        </tr>
+        <tr>
+            <td colspan="100%">Hello There Last Column</td>
+        </tr>
+    </table>    -->
+
+    
+    
+</body>
+</html>
