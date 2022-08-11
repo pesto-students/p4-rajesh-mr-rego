@@ -1,0 +1,46 @@
+html {
+    margin:    0 auto;
+    max-width: 640px;
+}
+
+body {
+    background-color: lightblue;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.block {
+    margin-top: 5px;
+}
+
+.mainlabel {
+    display: inline-block;
+    width: 140px;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+}
+
+.row > * {
+    flex-grow: 1;
+    margin: 10px;
+    flex-basis: 100%;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+}
