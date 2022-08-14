@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>My Favourite</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1 class="row center">My Favourite Game!</h1>
+
+        <div class="row">
+            <p class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus ligula at nulla sollicitudin, ac efficitur libero posuere. Quisque vitae nisl suscipit, congue est non, convallis ex.</p>
+            <p class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus ligula at nulla sollicitudin, ac efficitur libero posuere. Quisque vitae nisl suscipit, congue est non, convallis ex.</p>
+        </div>
+
+        <div class="row">
+            <div class="col image">
+                <img class="center" src="images/title.jpg" alt="Microsoft Solitare Collection">
+            </div>
+            <div class="col">
+                <p><strong>Lipsum Loren Ipsum</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus ligula at nulla sollicitudin, ac efficitur libero posuere.<br><br>
+                <strong>Lipsum Loren Ipsum</strong><br>Suspendisse quis gravida diam. Quisque pellentesque metus lorem, quis porta quam efficitur a. Morbi vel magna augue. In non sem turpis.</p>
+            </div>
+            </div>
+
+        <div class="row">
+            <form action="response.html">
+                <p>Please Sign Up</p>
+                <div class="block">
+                    <label class="mainlabel block">Title:</label> 
+                    <input type="radio" id="mr" name="salutation" value="Mr." required>
+                    <label for="mr">Mr.</label>
+                    <input type="radio" id="ms" name="salutation" value="Ms." required>
+                    <label for="ms">Ms.</label>
+                </div>
+                <div class="block">
+                    <label class="mainlabel block" for="fullname">Full name:</label> <input type="text" id="fullname" required>
+                </div>
+                <div class="block">
+                    <label class="mainlabel" for="phoneno">Phone No:</label> <input type="number" id="phoneno" required>
+                </div>
+                <div class="block">
+                    <label class="mainlabel" for="email">Email:</label> <input type="email" id="email" required>
+                </div>
+                <div class="block">
+                    <label class="mainlabel" for="password">Password:</label> <input type="password" id="password" required>
+                </div>
+                <div class="block">
+                    <label class="mainlabel" for="passwordcheck">Confirm Password:</label> <input type="password" id="passwordcheck" required>
+                </div>
+                
+                <div class="block">
+                    <label class="mainlabel" for="country">Country:</label>
+                    <select name="country" id="country">
+                        <option value="canada">Canada</option>
+                        <option value="india">India</option>
+                        <option value="englang">England</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </div>
+                
+                <div class="block">
+                    <label class="mainlabel" for="tac"></label>
+                    <input type="checkbox" id="tac" required>I have read the Terms & Conditions.
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
