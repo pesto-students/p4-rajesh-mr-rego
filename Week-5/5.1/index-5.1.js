@@ -1,8 +1,3 @@
-/*
-    In this example, we see adding a movie takes 3 seconds,
-    while retrieving movie names takes just 1 second.
-*/
-
 const movies = [
     {
         name: 'Matrix',
@@ -13,6 +8,10 @@ const movies = [
         desc: 'Mindless action movie with Sylvester Stallone.'
     }
 ];
+
+const starwars = {name: 'Star Wars', desc: 'Some Intergalactic stuff with many aliens.'};
+const lsc = {iname: 'Laal Singh Chadda', desc: 'Boycotting all Bollywood movies.'};
+const elcamino = {name: 'El Camino', desc: 'Dont Do Drugs!'};
 
 function getMovies() {
     setTimeout(() => {
@@ -35,12 +34,36 @@ function createMovie(movie) {
    })
 }
 
+/*
+    This is the async/await implementation
+*/
 async function addMovie(movie) {
     let result = await createMovie(movie);
     getMovies();
     return result;
 }
 
-const starwars = {name: 'Star Wars', desc: 'Some Intergalactic stuff with many aliens.'};
-addMovie(starwars).then((value) => console.log(value));
+// USING ASYNC/AWAIT
+addMovie(starwars)
+.then((value) => console.log('starwars then():', value))
+.catch((value) => console.log('starwars catch():', value));
 
+addMovie(lsc)
+.then((value) => console.log('lsc then():', value))
+.catch((value) => console.log('lsc catch():', value));
+
+/*
+This is the generator implementation
+*/
+async function* addMovieName(movie) {
+    let result = await createMovie(movie);
+    yield result;
+    getMovies();
+    return;
+}
+
+const iterator = addMovieName(elcamino);
+iterator.next()
+.then((value) => console.log('elcamino then():', value))
+.catch((value) => console.log('elcamino catch():', value));
+iterator.next();
