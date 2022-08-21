@@ -43,6 +43,16 @@ class Promise {
             onRejected(this.value);
         }
     }
+
+    catch(onRejected) {
+        if(this.status === 'pending') {
+            this.onRejectedCallbacks.push(onRejected);
+        }
+        
+        if(this.status === 'rejected') {
+            onRejected(this.value);
+        }
+    }
 }
 
 function getNumber() {
