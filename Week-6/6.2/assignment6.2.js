@@ -13,9 +13,9 @@ function spiralIt(arr) {
 
     let dir = DIR_R;    
 
-    let rowStart = 0;
+    let rowStart = 1;
     let rowEnd   = arr[0].length - 1;
-    let row = rowStart;
+    let row = 0;
 
     let colStart = 0;
     let colEnd   = arr.length - 1;
@@ -23,12 +23,12 @@ function spiralIt(arr) {
 
     // console.log(total_elements, dir);
 
-    for(let el=0 ; el<total_elements ; el++) {        
+    for(let el=0 ; el<total_elements ; el++) {
         let val = arr[row][col];
-        console.log('--------------------------------')
-        console.log('dir =', dir, 'val = ', val);
-        console.log('rowStart =', rowStart, 'rowEnd = ', rowEnd, 'row =', row);
-        console.log('colStart =', colStart, 'colEnd = ', colEnd, 'col =', col);
+        // console.log('--------------------------------')
+        // console.log('dir =', dir, 'val = ', val);
+        // console.log('rowStart =', rowStart, 'rowEnd = ', rowEnd, 'row =', row);
+        // console.log('colStart =', colStart, 'colEnd = ', colEnd, 'col =', col);
 
         if(val !== undefined) newArr.push(val);
 
@@ -39,7 +39,7 @@ function spiralIt(arr) {
                 } else {
                     dir = DIR_D;
                     
-                    rowStart++;
+                    // rowStart++;
                     row = rowStart;
                 }
             break;
@@ -102,10 +102,19 @@ const input4x4 = [
     [ 5,  6,  7,  8],
     [ 9, 10, 11, 12],
     [13, 14, 15, 16]
-]
+];
+
+const input5x5 = [
+    [  1,   2,   3,  4,   5],
+    [  6,   7,   8,  9,  10],
+    [ 11,  12,  13,  14, 15],
+    [ 16,  17,  18,  19, 20],
+    [ 21,  22,  23,  24, 25],
+];
 // console.log(input);
 // console.log('---------------------------------------------');
 // spiralIt(input3x3);
-spiralIt(input4x4);
-// console.log(spiralIt(input4x4));
+// spiralIt(input4x4);
+const arr = spiralIt(input5x5);
+console.log(arr);
 
