@@ -16,7 +16,7 @@ function maxSumOfSubArray(arr) {
     } else if(arrLen == 2) {
         maxSum = Math.max(arr[0], arr[1]);
     } else {
-        // initiate the minimum and maxim
+        // initiate the minimum and maximum possible subarray lengths
         let MinLen = 2;
         let MaxLen = arrLen - 1;
 
