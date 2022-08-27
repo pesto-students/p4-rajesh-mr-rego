@@ -16,7 +16,7 @@ function checkDiff(arr, diff) {
 }
 
 const A    = [ 5, 10, 3, 2, 50, 80];
-const diff = -40;
+const diff = 0;
 
 const result = checkDiff(A, diff);
 console.log(`The numbers are [${result[0]}, ${result[1]}]`);
