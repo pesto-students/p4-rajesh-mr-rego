@@ -6,7 +6,7 @@ class SLLNode {
 }
 
 function createSLL(arr) {
-    head = new SLLNode(arr[0]);
+    let head = new SLLNode(arr[0]);
     let curr = head;
 
     for(let i=1 ; i<arr.length ; i++) {
@@ -17,15 +17,31 @@ function createSLL(arr) {
     return head;
 }
 
-function traverseSLL() {
+function traverseSLL(head) {
+    let arr = [];
+
     let curr = head;
     while(curr != null) {
-        console.log(curr.value);
+        arr.push(curr.value);
         curr = curr.next;
     }
+
+    console.log("SLL: ", arr);
 }
 
-let head = null;
+function reverseSLL(head) {
+    let curr = head;
+    let newarr = [];
+    while(curr != null) {
+        newarr.push(curr.value);
+        curr = curr.next;
+    }
 
-head = createSLL([15, 3, 24, 12, 5]);
-traverseSLL();
+    newarr.reverse();
+    return createSLL(newarr);
+}
+
+let head1 = createSLL([15, 3, 24, 12, 5]);
+traverseSLL(head1);
+head1 = reverseSLL(head1);
+traverseSLL(head1);
