@@ -1,0 +1,16 @@
+[{
+    "task": "Give dog a bath",
+    "complete": false
+  }, {
+    "task": "Do laundry",
+    "complete": true
+  }, {
+    "task": "Vacuum floor",
+    "complete": false
+  }, {
+    "task": "Feed cat",
+    "complete": true
+  }, {
+    "task": "Change light bulbs",
+    "complete": false
+  }]
