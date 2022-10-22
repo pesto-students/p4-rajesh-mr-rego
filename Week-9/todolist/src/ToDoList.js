@@ -5,16 +5,17 @@ import TodoItem from './ToDoItem';
 import './App.css';
 
 function ToDoList({ title }) {
-    const [toDoList, setToDoList] = useState([{
-        "task": "Default task 1",
-        "complete": false
-      }, {
-        "task": "Default task 2",
-        "complete": false
-      }, {
-        "task": "Default task 3",
-        "complete": true
-      }]);
+    const [toDoList, setToDoList] = useState(
+        [{
+            "task": "Default task 1",
+            "complete": false
+        }, {
+            "task": "Default task 2",
+            "complete": false
+        }, {
+            "task": "Default task 3",
+            "complete": true
+        }]);
 
     const [inputValue, setInputValue] = useState("");
     const [isVisible, setVisible] = useState(true);
@@ -62,10 +63,10 @@ function ToDoList({ title }) {
 
     const handleDelete = () => {
         let todo = [...toDoList].filter((item) => !item.complete);
-        if(todo.length == 0) setVisible(false);
+        if (todo.length == 0) setVisible(false);
     }
 
-    if(!isVisible) return;
+    if (!isVisible) return;
 
     return (
         <div className="ToDoList" style={{ border: '1px solid red', margin: '10px', padding: '10px' }}>
