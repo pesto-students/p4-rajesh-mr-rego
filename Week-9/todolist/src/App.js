@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import { Form, InputGroup, ListGroup, Stack, Button } from 'react-bootstrap';
+import { Form, InputGroup, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ToDoList from './ToDoList';
-import data from './data.json';
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -22,7 +21,8 @@ function App() {
 
   const addToDoList = (title) => {
     const newToDoLists = [...toDoLists];
-    newToDoLists.push(title);
+    const newObj = <ToDoList title={title}></ToDoList>;
+    newToDoLists.push(newObj);
     setToDoLists(newToDoLists);
   }
 
@@ -43,9 +43,7 @@ function App() {
         </InputGroup>
       </Form>
 
-      {toDoLists.map((elem) => (
-        <ToDoList title={elem}></ToDoList>
-      ))}
+      {toDoLists.map((elem) => elem)}
     </div>
   );
 }

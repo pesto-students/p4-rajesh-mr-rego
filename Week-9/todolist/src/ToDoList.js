@@ -3,11 +3,21 @@ import { Form, InputGroup, ListGroup, Stack, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TodoItem from './ToDoItem';
 import './App.css';
-import data from './data.json';
 
 function ToDoList({ title }) {
-    const [toDoList, setToDoList] = useState(data);
+    const [toDoList, setToDoList] = useState([{
+        "task": "Default task 1",
+        "complete": false
+      }, {
+        "task": "Default task 2",
+        "complete": false
+      }, {
+        "task": "Default task 3",
+        "complete": true
+      }]);
+
     const [inputValue, setInputValue] = useState("");
+    const [isVisible, setVisible] = useState(true);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -21,7 +31,7 @@ function ToDoList({ title }) {
         const newToDo = [...toDoList];
         newToDo.push(
             {
-                "task": inputValue,
+                "task": elem,
                 "complete": false
             }
         );
@@ -50,6 +60,13 @@ function ToDoList({ title }) {
         setToDoList(newToDo);
     }
 
+    const handleDelete = () => {
+        let todo = [...toDoList].filter((item) => !item.complete);
+        if(todo.length == 0) setVisible(false);
+    }
+
+    if(!isVisible) return;
+
     return (
         <div className="ToDoList" style={{ border: '1px solid red', margin: '10px', padding: '10px' }}>
             <h1>{title}</h1>
@@ -66,6 +83,9 @@ function ToDoList({ title }) {
                     </Button>
                     <Button variant="warning" id="cleanup" onClick={() => handleCleanup()}>
                         Cleanup
+                    </Button>
+                    <Button variant="danger" id="delete" onClick={() => handleDelete()}>
+                        Delete
                     </Button>
                 </InputGroup>
             </Form>
