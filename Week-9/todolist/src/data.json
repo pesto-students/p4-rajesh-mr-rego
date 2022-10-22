@@ -1,16 +1,10 @@
 [{
-    "task": "Give dog a bath",
+    "task": "Default task 1",
     "complete": false
   }, {
-    "task": "Do laundry",
+    "task": "Default task 2",
+    "complete": false
+  }, {
+    "task": "Default task 3",
     "complete": true
-  }, {
-    "task": "Vacuum floor",
-    "complete": false
-  }, {
-    "task": "Feed cat",
-    "complete": true
-  }, {
-    "task": "Change light bulbs",
-    "complete": false
   }]
