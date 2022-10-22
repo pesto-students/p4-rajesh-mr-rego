@@ -1,0 +1,10 @@
+[{
+    "task": "Default task 1",
+    "complete": false
+  }, {
+    "task": "Default task 2",
+    "complete": false
+  }, {
+    "task": "Default task 3",
+    "complete": true
+  }]
