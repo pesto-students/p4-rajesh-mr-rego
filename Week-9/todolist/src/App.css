@@ -1,0 +1,16 @@
+.App {
+  display:flexbox;
+  /* width: 60%; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ToDoList {
+  display:flexbox;
+  /* width: 100%; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
