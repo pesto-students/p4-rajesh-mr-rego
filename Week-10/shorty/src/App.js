@@ -7,7 +7,10 @@ const App = () => {
   return (
     <div className='App'>
       <div className='gradient__bg'>
+        {/* This is the main component */}
         <Navbar />
+
+        {/* Botom component */}
         <Canvas />
       </div>
     </div>
