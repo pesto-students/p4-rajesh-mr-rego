@@ -9,4 +9,4 @@ I'm going to explain pretty quickly what has been done.
    <br>
 3. That's about it. Lotsa new things learnt. Please go to the link below, and check out my app.
 
-![Shorty](https://main.dxotsmet654wz.amplifyapp.com/)
+[Shorty](https://main.dxotsmet654wz.amplifyapp.com/)
