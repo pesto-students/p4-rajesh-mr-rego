@@ -1,13 +1,20 @@
-import { useState } from 'react';
 import './App.css';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { flip } from './redux/flipSlice';
+
 function App() {
-  const [isLit, setLit] = useState(true);
+  const room = useSelector((state) => state.switch.isLit);
+  const dispatch = useDispatch();
+
+  const flipSwitch = () => {
+    dispatch(flip());
+  }
 
   return (
-    <div className={"App " + (isLit ? "Lit" : "Dark")} >
-      <h1>The room is now {isLit ? "lit" : "dark"}.</h1>
-      <button onClick={() => setLit(!isLit)}>Flip</button>
+    <div className={"App " + (room ? "Lit" : "Dark")} >
+      <h1>The room is now {room ? "lit" : "dark"}.</h1>
+      <button onClick={flipSwitch}>Flip</button>
     </div >
   );
 }
